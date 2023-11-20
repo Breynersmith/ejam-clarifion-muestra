@@ -1,0 +1,57 @@
+.header {
+    background-color: #252F3D;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    color: #FFF;
+    text-align: center;
+    font-family: Manrope;
+    font-size: .8em;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.header p {
+    display: flex;
+    gap: 10px;
+    font-size: .7rem;
+    align-items: center;
+}
+.button-box {
+    display: none;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 500px) {
+    .header {
+        width: 100vw;
+    }
+    .header-items {
+        
+        display: none;
+    }
+    .header-item-1 {
+        display: block;
+    }
+
+    .button-box {
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+    }
+    .button-box button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    button:hover {
+        color: #dedede;
+    }
+}
