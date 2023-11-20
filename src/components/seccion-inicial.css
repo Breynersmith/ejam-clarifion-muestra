@@ -56,12 +56,11 @@
 }
 
 .main-content-box-steps {
-    padding: 0 2.5vw;
     display: flex;
-    justify-content: space-between;
-    width: 95vw;
-    height: 80px;
+    justify-content: space-evenly;
+    width: 100vw;
     align-items: center;
+    margin: auto;
 }
 
 .main-content-box-steps p {

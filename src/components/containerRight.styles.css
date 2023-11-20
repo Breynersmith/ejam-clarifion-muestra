@@ -178,5 +178,7 @@ height: 5.5rem;
 }
 
 @media (max-width: 600px) {
-    
+    .img-clarifion{
+        max-height: 150px;
+    }
 }
