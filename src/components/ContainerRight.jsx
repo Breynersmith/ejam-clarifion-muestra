@@ -9,7 +9,7 @@ function ContainerRight(props) {
                {props.ancho > 600 && <Title />}
                
                 <div className='product-container-right-box-1'>
-                    <img src="img/img-1.png" alt="clarifion"  className=''/>
+                    <img src="img/img-1.png" alt="clarifion"  className='img-clarifion'/>
                     <div className='product-container-right-box-1-description'>
                         <div>
                             <h4>Clarifion Air Ionizer</h4>
@@ -22,7 +22,7 @@ function ContainerRight(props) {
                             </p>
                             <p className='price'>$180 <span>$84</span></p>
                         </div>
-                        <div className='stock'><input type="radio" name="" id="" />12 left in Stock</div>
+                        <div className='stock'><input type="radio" name="" id="" style={{ marginRight: '10px' }} />12 left in Stock</div>
                         <p>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
                             with a simple.</p>
                     </div>

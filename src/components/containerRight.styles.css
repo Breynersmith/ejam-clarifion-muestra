@@ -176,3 +176,7 @@ line-height: 140%; /* 1.4rem */
     width: 5.5rem;
 height: 5.5rem;
 }
+
+@media (max-width: 600px) {
+    
+}
