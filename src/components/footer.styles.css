@@ -1,6 +1,8 @@
 .footer {
     margin: 0;
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #252F3D;
     color: white;
     display: inline-flex;
