@@ -1,11 +1,10 @@
 .containerRight {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
     gap: 1.5rem;
-    width: 45vw;
 }
 .product-container-right {
     display: flex;
