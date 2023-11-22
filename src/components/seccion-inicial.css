@@ -6,12 +6,15 @@
 }
 
 .box-logo {
-    width: 90%;
-    padding: 20px 5%;
+    width: 100%;
+    padding: 20px 10%;
     top: 50px;
     display: flex;
     justify-content: space-between;
     
+  }
+  .box-logo img {
+    width: 20%;
   }
   
   
@@ -27,7 +30,7 @@
 }
 
 .main-content-box-title h1 {
-    width: 80%;
+    width: 100%;
     text-align: center;
     font-family: 'Manrope';
     font-style: normal;
@@ -57,11 +60,10 @@
 
 .main-content-box-steps {
     display: flex;
-    justify-content: space-evenly;
-    width: 95%;
-    padding: 0 2.5%;
+    width: 100%;
     align-items: center;
-    margin: auto;
+    justify-content: center;
+    gap: 50px;
 }
 
 .main-content-box-steps p {

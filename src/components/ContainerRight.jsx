@@ -1,8 +1,19 @@
 import Title from './Title'
 import './containerRight.styles.css'
+import { useState } from 'react'
 import proptypes from 'prop-types'
 
 function ContainerRight(props) {
+
+    const [ancho, setAncho] = useState(window.innerWidth);
+
+    const handleWindow = () => {
+        setAncho(window.innerWidth);
+        console.log('el ancho de la ventana es :',ancho);
+    };
+
+    handleWindow
+   console.log(ancho);
 
   return (
     <div className='product-container-right'>
@@ -12,7 +23,7 @@ function ContainerRight(props) {
                     <img src="img/img-1.png" alt="clarifion"  className='img-clarifion'/>
                     <div className='product-container-right-box-1-description'>
                         <div>
-                            <h4>Clarifion Air Ionizer</h4>
+                            <h4 className='title'>Clarifion Air Ionizer</h4>
                             <p>
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
@@ -21,12 +32,19 @@ function ContainerRight(props) {
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                             </p>
                             <p className='price'>$180 <span>$84</span></p>
+
+                            <div className='stock'><input type="radio" name="" id="" style={{ marginRight: '10px' }} />12 left in Stock</div>
                         </div>
-                        <div className='stock'><input type="radio" name="" id="" style={{ marginRight: '10px' }} />12 left in Stock</div>
-                        <p>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
-                            with a simple.</p>
+                        
+                        {ancho > 500 && <p className='description'>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
+                            with a simple.</p>}
+                        
                     </div>
+                    
+                    
                 </div>
+                {ancho < 500 && <p style={{ textAlign: 'center', fontSize: '.75rem'}}>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
+                        with a simple.</p>}
                 <div className='product-container-right-box-2'>
                     <p><img src="img/icons-chulito.svg" alt="" />Negative Ion Technology may help with allergens</p>
                     <p> <img src="img/icons-chulito.svg" alt="" />Designed for air rejuvenation</p>
