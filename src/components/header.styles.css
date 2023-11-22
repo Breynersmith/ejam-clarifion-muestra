@@ -1,10 +1,12 @@
 .header {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
     background-color: #252F3D;
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
     height: 50px;
     color: #FFF;
     text-align: center;
@@ -39,7 +41,7 @@
     }
 
     .button-box {
-        width: 80vw;
+        width: 100vw;
         display: flex;
         justify-content: space-between;
         position: absolute;
@@ -53,5 +55,11 @@
     }
     button:hover {
         color: #dedede;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        width: 100vw;
     }
 }
