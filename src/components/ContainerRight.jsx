@@ -19,10 +19,10 @@ function ContainerRight(props) {
                {props.ancho > 600 && <Title />}
                
                 <div className='flex gap-2'>
-                    <img src="img/img-1.png" alt="clarifion"  className='w-1/3 h-1/3'/>
+                    <img src="img/img-1.png" alt="clarifion"  className='w-24 h-24'/>
                     <div className=''>
-                        <div className='flex flex-col gap-1'>
-                            <h4 className='font-[Manrope]'>Clarifion Air Ionizer</h4>
+                        <div className='ml-5 flex flex-col gap-2'>
+                            <h4 className='relative font-[Manrope] text-lg'>Clarifion Air Ionizer</h4>
                             <p className='flex'>
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
@@ -30,9 +30,9 @@ function ContainerRight(props) {
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                             </p>
-                            <p className='price'>$180 <span>$84</span></p>
+                            <p className='absolute  right-[8%] text-lg'>$180 <span className='text-[#528de5] font-bold text-xl'>$84</span></p>
 
-                            <div className='flex gap-2'><input type="radio" />12 left in Stock
+                            <div className='flex gap-2 text-lg'><input type="radio" />12 left in Stock
                             </div>
                         </div>
                         
@@ -54,11 +54,11 @@ function ContainerRight(props) {
                 <img src="img/icon-porcentaje.svg" alt="" />
                     <p className='text-sm'>
                     
-                    Save <span >53% </span>and get <span>6 extra Clarifision</span> for only <span>$14 Each.</span>
+                    Save <span className='text-[#2C7EF8]'>53% </span>and get <span className='text-[#2C7EF8]'>6 extra Clarifision</span> for only <span className='text-[#2C7EF8]'>$14 Each.</span>
                     </p>
                 </div>
                 <div className='product-container-right-box-4'>
-                <button className='bg-[#59AE43] rounded-xl text-white font-[Manrope] w-full mt-5 p-2'> YES - CLAIM MY DISCOUNT</button>
+                <button className='bg-[#59AE43] rounded-xl text-white font-[Manrope] w-full mt-5 p-2 cursor-pointer hover:bg-[#5aa246]'> YES - CLAIM MY DISCOUNT</button>
                 <div className='mt-5 flex flex-wrap gap-3 text-xs justify-center'>
                     <p> Free Shipping</p>
                     <p className='flex'> 
