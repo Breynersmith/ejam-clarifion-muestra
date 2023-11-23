@@ -48,8 +48,8 @@ export default function Header() {
   const renderItems = showAll ? listItems : [listItems[index]];
 
   return (
-    <div className="header flex justify-center bg-sky-950 text-white w-full py-5">
-      <button onClick={backItem}><i className="fa-solid fa-chevron-up fa-rotate-270 mr-2"></i></button>
+    <div className="header flex gap-6 justify-center bg-sky-950 text-white w-full py-5">
+      <button onClick={backItem}><i className="fa-solid fa-chevron-up fa-rotate-270 mr-2 hover:text-gray-300 lg:hidden"></i></button>
       {renderItems.map((item, i) => (
         <div className='flex gap-1' key={i}>
           <img src={item.img} alt={item.title} />
@@ -57,7 +57,7 @@ export default function Header() {
         </div>
       ))}
         
-        <button onClick={nextItem}><i className="fa-solid fa-chevron-up fa-rotate-90 ml-2 "></i></button>
+        <button onClick={nextItem}><i className="fa-solid fa-chevron-up fa-rotate-90 ml-2  hover:text-gray-300 lg:hidden"></i></button>
       
     </div>
   );

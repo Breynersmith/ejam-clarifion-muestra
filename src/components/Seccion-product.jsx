@@ -21,12 +21,16 @@ function SeccionProduct() {
     };
   }, []);
   return (
-    <div className="p-2">
-        <div className="p-5">
-            
-        <div ><ContainerLeft ancho={ancho} /></div>
-        <div><ContainerRight  ancho={ancho}/></div>
+    <div className="p-2 mb-12">
+      <div className="px-16 lg:flex lg:gap-5">
+
+        <div className='lg:w-full'>
+          <ContainerLeft ancho={ancho} />
         </div>
+        <div className='lg:w-full'>
+          <ContainerRight ancho={ancho} />
+        </div>
+      </div>
     </div>
   )
 }

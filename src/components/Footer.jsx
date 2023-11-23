@@ -1,8 +1,8 @@
 
 
-export default function Header() {
+export default function Footer() {
   return (
-    <div className="bg-[#252F3D] text-white text-center py-5 text-xs px-5 flex-col">
+    <div className="mt-10 bg-[#252F3D] text-white text-center py-5 text-xs px-5 flex-col">
       <p className="flex  justify-center">
       Copyright (c) 2023 <span className="px-2">|</span>  Clarifionsupport@clarifion.com
       </p>
