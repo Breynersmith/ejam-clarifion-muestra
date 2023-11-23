@@ -22,7 +22,7 @@ function SeccionProduct() {
   }, []);
   return (
     <div className="p-2 mb-12">
-      <div className="px-16 lg:flex lg:gap-5">
+      <div className="lg:px-28 lg:flex lg:gap-5">
 
         <div className='lg:w-full'>
           <ContainerLeft ancho={ancho} />

@@ -45,7 +45,7 @@ export default function Header() {
     };
   }, []);
 
-  const renderItems = showAll ? listItems : [listItems[index]];
+  const renderItems = showAll ? listItems : listItems.slice(index, index + 1);
 
   return (
     <div className="header flex gap-6 justify-center bg-sky-950 text-white w-full py-5">
@@ -56,9 +56,7 @@ export default function Header() {
           <p className="font-['Manrope']">{item.title}</p>
         </div>
       ))}
-        
-        <button onClick={nextItem}><i className="fa-solid fa-chevron-up fa-rotate-90 ml-2  hover:text-gray-300 lg:hidden"></i></button>
-      
+      <button onClick={nextItem}><i className="fa-solid fa-chevron-up fa-rotate-90 ml-2  hover:text-gray-300 lg:hidden"></i></button>
     </div>
   );
 }
