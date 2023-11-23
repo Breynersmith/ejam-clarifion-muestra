@@ -1,26 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-  max-width:  100%;
-  min-height: 100vh;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
- 
-}
-
-
-button {
-  background: none;
-  border: none;
-
-  cursor: pointer;
+    font-family: Manrope;
 }

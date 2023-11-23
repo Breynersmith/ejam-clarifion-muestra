@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ContainerLeft from "./ContainerLeft"
 import ContainerRight from "./ContainerRight"
-import './Seccion-product.css'
+
 
 
 function SeccionProduct() {
@@ -21,8 +21,8 @@ function SeccionProduct() {
     };
   }, []);
   return (
-    <div className="seccion-product">
-        <div className="main-content">
+    <div className="p-2">
+        <div className="p-5">
             
         <div ><ContainerLeft ancho={ancho} /></div>
         <div><ContainerRight  ancho={ancho}/></div>

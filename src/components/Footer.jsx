@@ -1,12 +1,12 @@
-import './footer.styles.css'
+
 
 export default function Header() {
   return (
-    <div className="footer">
-      <p>
-      Copyright (c) 2023 <span style={{ margin: '10px' }}>|</span>  Clarifionsupport@clarifion.com
+    <div className="bg-[#252F3D] text-white text-center py-5 text-sm">
+      <p className="flex  justify-center">
+      Copyright (c) 2023 <span>|</span>  Clarifionsupport@clarifion.com
       </p>
-      <p><img src="img/icon-candado.svg" alt="icon candado" style={{ marginRight: '10px' }} />Secure 256-bit SSL encryption.</p>
+      <p className="mt-4 flex gap-2 justify-center"><img src="img/icon-candado.svg" alt="icon candado" />Secure 256-bit SSL encryption.</p>
     </div>
   )
 }

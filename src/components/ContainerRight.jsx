@@ -1,5 +1,4 @@
 import Title from './Title'
-import './containerRight.styles.css'
 import { useState } from 'react'
 import proptypes from 'prop-types'
 
@@ -16,15 +15,15 @@ function ContainerRight(props) {
    console.log(ancho);
 
   return (
-    <div className='product-container-right'>
+    <div className='mt-5'>
                {props.ancho > 600 && <Title />}
                
-                <div className='product-container-right-box-1'>
-                    <img src="img/img-1.png" alt="clarifion"  className='img-clarifion'/>
-                    <div className='product-container-right-box-1-description'>
-                        <div>
-                            <h4 className='title'>Clarifion Air Ionizer</h4>
-                            <p>
+                <div className='flex gap-2'>
+                    <img src="img/img-1.png" alt="clarifion"  className='w-1/3 h-1/3'/>
+                    <div className=''>
+                        <div className='flex flex-col gap-1'>
+                            <h4 className='font-[Manrope]'>Clarifion Air Ionizer</h4>
+                            <p className='flex'>
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
@@ -33,37 +32,39 @@ function ContainerRight(props) {
                             </p>
                             <p className='price'>$180 <span>$84</span></p>
 
-                            <div className='stock'><input type="radio" name="" id="" style={{ marginRight: '10px' }} />12 left in Stock</div>
+                            <div className='flex gap-2'><input type="radio" />12 left in Stock
+                            </div>
                         </div>
                         
-                        {ancho > 500 && <p className='description'>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
+                        {ancho > 500 && <p className='mt-5 text-center font-[Manrope]'>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
                             with a simple.</p>}
                         
                     </div>
                     
                     
                 </div>
-                {ancho < 500 && <p style={{ textAlign: 'center', fontSize: '.75rem'}}>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
+                {ancho < 500 && <p className='mt-5 text-center font-[Manrope]'>Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers
                         with a simple.</p>}
-                <div className='product-container-right-box-2'>
-                    <p><img src="img/icons-chulito.svg" alt="" />Negative Ion Technology may help with allergens</p>
-                    <p> <img src="img/icons-chulito.svg" alt="" />Designed for air rejuvenation</p>
-                    <p> <img src="img/icons-chulito.svg" alt="" />Perfect for every room in all types of places.</p>
+                <div className='flex flex-col gap-2 mt-5'>
+                    <p className='flex gap-2 text-sm'><img src="img/icons-chulito.svg" alt="" className='w-5' />Negative Ion Technology may help with allergens</p>
+                    <p className='flex gap-2 text-sm'> <img src="img/icons-chulito.svg" alt="" className='w-5' />Designed for air rejuvenation</p>
+                    <p className='flex gap-2 text-sm'> <img src="img/icons-chulito.svg" alt="" className='w-5' />Perfect for every room in all types of places.</p>
                 </div>
-                <div className='product-container-right-box-3'>
-                    <p>
-                    <img src="img/icon-porcentaje.svg" alt="" />
-                    Save <span>53% </span>and get <span>6 extra Clarifision</span> for only <span>$14 Each.</span>
+                <div className='flex gap-5 mt-5 bg-[#EDF3FD] p-3 rounded-lg'>
+                <img src="img/icon-porcentaje.svg" alt="" />
+                    <p className='text-sm'>
+                    
+                    Save <span >53% </span>and get <span>6 extra Clarifision</span> for only <span>$14 Each.</span>
                     </p>
                 </div>
                 <div className='product-container-right-box-4'>
-                <button> YES - CLAIM MY DISCOUNT</button>
-                <div className='pagos' style={{display: 'flex', flexWrap: 'wrap'}}>
+                <button className='bg-[#59AE43] rounded-xl text-white font-[Manrope] w-full mt-5 p-2'> YES - CLAIM MY DISCOUNT</button>
+                <div className='mt-5 flex flex-wrap gap-3 text-xs justify-center'>
                     <p> Free Shipping</p>
-                    <p style={{display: 'flex', gap: '5px'}}> 
-                        <img src="img/icon-candado-gray.svg" alt="" style={{marginRight: '5px'}}/>
+                    <p className='flex'> 
+                        <img src="img/icon-candado-gray.svg" alt="" className='w-4 mr-2'/>
                         Secure 256-Bit SSL Encryption</p>
-                    <p>
+                    <p className='flex'>
                         <img src='img/icon-visa.svg' alt='icono visa'/>
                         <img src='img/icon-pay.svg' alt='icono pay'/>
                         <img src='img/icon-paypal.svg' alt='icono paypal'/>
@@ -75,8 +76,8 @@ function ContainerRight(props) {
                     </p>
                 </div>
                 </div>
-                <p className='parrafo'>No thanks, I don’t want this.</p>
-                <p className='parrafo-garantia'><img src="img/garantia.png" alt="imagen garantia" />
+                <p className='text-red-500 text-center my-5 text-lg font-[Manrope]'>No thanks, I don’t want this.</p>
+                <p className='flex gap-2 text-xs'><img src="img/garantia.png" alt="imagen garantia" className='w-14 h-14' />
                 If you are not completely thrilled with your Clarifion - We have a 30 day satisfaction guarantee. Please refer to our return policy at the bottom of the page for more details. Happy Shopping!
                 </p>
                 
