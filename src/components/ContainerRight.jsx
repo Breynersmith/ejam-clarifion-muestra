@@ -77,7 +77,7 @@ function ContainerRight(props) {
                 </div>
                 </div>
                 <p className='text-red-500 text-center my-5 text-lg font-[Manrope]'>No thanks, I don’t want this.</p>
-                <p className='flex gap-2 text-xs'><img src="img/garantia.png" alt="imagen garantia" className='w-14 h-14' />
+                <p className='flex gap-2 text-xs lg:text-base'><img src="img/garantia.png" alt="imagen garantia" className='w-14 h-14 lg:w-24 lg:h-24 lg:mr-5' />
                 If you are not completely thrilled with your Clarifion - We have a 30 day satisfaction guarantee. Please refer to our return policy at the bottom of the page for more details. Happy Shopping!
                 </p>
                 
