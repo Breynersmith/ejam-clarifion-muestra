@@ -22,7 +22,7 @@ function ContainerRight(props) {
                     <img src="img/img-1.png" alt="clarifion"  className='w-24 h-24'/>
                     <div className=''>
                         <div className='ml-5 flex flex-col gap-2'>
-                            <h4 className='relative font-[Manrope] text-lg'>Clarifion Air Ionizer</h4>
+                            <h4 className='relative font-[Manrope] text-sm md:text-base lg:text-lg'>Clarifion Air Ionizer</h4>
                             <p className='flex'>
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
                                 <img src="img/icon-estrellita.svg" alt="icono estrellita calificacion" />
