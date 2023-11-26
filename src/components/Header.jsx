@@ -1,8 +1,36 @@
-import { useState, useEffect } from 'react';
+import {  useState, useEffect  } from 'react';
 
 export default function Header() {
   const [index, setIndex] = useState(0);
+  const [anchoPantalla , setAnchoPantalla] = useState(window.innerWidth);
+
   const [showAll, setShowAll] = useState(false);
+  
+ const handleResize = () => {
+    setAnchoPantalla(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setIndex(0);
+  }, [anchoPantalla]);
+
+  useEffect(() => {
+    if (anchoPantalla > 768) {
+      setShowAll(true);
+    } else {
+      setShowAll(false);
+    }
+  }, [anchoPantalla]);
+
+
+  
 
   const listItems = [
     {
@@ -31,32 +59,19 @@ export default function Header() {
     setIndex((prevIndex) => (prevIndex - 1 + listItems.length) % listItems.length);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setShowAll(window.innerWidth > 600); // Cambia el valor de 600 según sea necesario
-    };
-
-    // Agregar el event listener para el manejo de cambios en el tamaño de la ventana
-    window.addEventListener('resize', handleResize);
-
-    // Limpieza del event listener cuando el componente se desmonta
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  
 
   const renderItems = showAll ? listItems : listItems.slice(index, index + 1);
 
   return (
-    <div className="header flex gap-6 justify-center bg-sky-950 text-white w-full py-5">
-      <button onClick={backItem}><i className="fa-solid fa-chevron-up fa-rotate-270 mr-2 hover:text-gray-300 lg:hidden"></i></button>
+    <div className="header flex gap-4 justify-center bg-sky-950 text-white w-full py-5 ">
+      <button onClick={backItem}><i className="fa-solid fa-chevron-up fa-rotate-270  hover:text-gray-300 lg:hidden"></i></button>
       {renderItems.map((item, i) => (
-        <div className='flex gap-1' key={i}>
-          <img src={item.img} alt={item.title} />
-          <p className="font-['Manrope']">{item.title}</p>
-        </div>
+        <p className='flex gap-1' key={i}>
+          <img src={item.img} alt={item.title} />{item.title}
+        </p>
       ))}
-      <button onClick={nextItem}><i className="fa-solid fa-chevron-up fa-rotate-90 ml-2  hover:text-gray-300 lg:hidden"></i></button>
+      <button onClick={nextItem}><i className="fa-solid fa-chevron-up fa-rotate-90  hover:text-gray-300 lg:hidden"></i></button>
     </div>
   );
 }
