@@ -6,16 +6,18 @@ import SeccionInicial from './components/Seccion-inicial'
 import SeccionProduct from './components/Seccion-product'
 
 function App() {
+
+  
   
   return (
-    <>
+    
       <div className='App'>
       <Header />
       <SeccionInicial />
       <SeccionProduct />
       <Footer />
       </div>
-    </>
+    
   )
 }
 

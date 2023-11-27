@@ -1,22 +1,14 @@
 import Title from './Title'
-import { useState } from 'react'
 import proptypes from 'prop-types'
 
-function ContainerRight(props) {
+function ContainerRight({ ancho, showModalHandler }) {
+    
+    
 
-    const [ancho, setAncho] = useState(window.innerWidth);
-
-    const handleWindow = () => {
-        setAncho(window.innerWidth);
-        console.log('el ancho de la ventana es :',ancho);
-    };
-
-    handleWindow
-   console.log(ancho);
 
   return (
     <div className='mt-5'>
-               {props.ancho > 600 && <Title />}
+               {ancho > 600 && <Title />}
                
                 <div className='flex gap-2'>
                     <img src="img/img-1.png" alt="clarifion"  className='w-24 h-24'/>
@@ -58,7 +50,9 @@ function ContainerRight(props) {
                     </p>
                 </div>
                 <div className='product-container-right-box-4'>
-                <button className='bg-[#59AE43] rounded-xl text-white font-[Manrope] w-full mt-5 p-2 cursor-pointer hover:bg-[#5aa246]'> YES - CLAIM MY DISCOUNT</button>
+                <button className='bg-[#59AE43] rounded-xl text-white font-[Manrope] w-full mt-5 p-2 cursor-pointer hover:bg-[#5aa246]'
+                onClick={showModalHandler}
+                > YES - CLAIM MY DISCOUNT</button>
                 <div className='mt-5 flex flex-wrap gap-3 text-xs justify-center'>
                     <p> Free Shipping</p>
                     <p className='flex'> 
@@ -86,7 +80,8 @@ function ContainerRight(props) {
 }
 
 ContainerRight.propTypes = {
-  ancho: proptypes.number
+  ancho: proptypes.number,
+  showModalHandler: proptypes.func
 }
 
 export default ContainerRight
